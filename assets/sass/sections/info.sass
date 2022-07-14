@@ -1,7 +1,10 @@
 .info
-    background: transparent linear-gradient(158deg, #30E6FC 0%, #290266 100%) 0% 0% no-repeat padding-box;
+    background: url(../images/info.jpg)
+    background-repeat: no-repeat
+    background-position: center
+    background-size: cover
     width: auto
-    height: 250px
+    height: 350px
     display: flex
     align-items: center
     justify-content: center
@@ -9,12 +12,16 @@
 
 .info p
     color: $white
-    font-size: 30px
+    font-size: 35px
     font-weight: 200
     text-align: center
     padding: 10px
 
 // responsive
 @media (max-width: $layout-breakpoint-tablet)
+
+    .info
+        height: 250px
+
     .info p
         font-size: 25px

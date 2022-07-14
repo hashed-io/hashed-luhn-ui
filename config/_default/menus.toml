@@ -1,26 +1,68 @@
 [[main]]
     name = "Team"
-    url = "/#team"
+    url = "/team"
     weight = 1
 
 [[main]]
     name = "Docs"
-    url = "/#docs"
+    url = "/docs"
     weight = 2
 
 [[main]]
-    name = "Docs"
-    url = "/#docs"
+    name = "News"
+    url = "/news"
     weight = 3
 
-[[main]]
-    name = "News"
-    url = "/#news"
-    weight = 4
+
+[[button]]
+    name = "Get in touch"
+    url = "/touch"
+    weight = 1
+
+
+[[social]]
+    name = 'Medium'
+    url = 'https://medium.com'
+    weight = '1'
+    [social.params]
+        icon = 'icons/medium.svg'
 
 [[social]]
     name = 'Twitter'
     url = 'https://twitter.com'
-    weight = '1'
+    weight = '2'
     [social.params]
-        icon = ''
+        icon = 'icons/twitter.svg'
+
+[[social]]
+    name = 'GitLab'
+    url = 'https://gitlab.com'
+    weight = '3'
+    [social.params]
+        icon = 'icons/gitlab.svg'
+
+
+[[footer]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+[[footer]]
+    name = "Team"
+    url = "/team"
+    weight = 2
+
+[[footer]]
+    name = "Docs"
+    url = "/docs"
+    weight = 3
+
+[[footer]]
+    name = "News"
+    url = "/news"
+    weight = 4
+
+[[footer]]
+    name = "Get in touch"
+    url = "/touch"
+    weight = 5

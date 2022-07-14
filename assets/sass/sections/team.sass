@@ -1,7 +1,10 @@
 .team
-    background: transparent linear-gradient(171deg, #30E6FC 0%, #290266 100%) 0% 0% no-repeat padding-box
-    padding: 90px 0
+    background: url(../images/team.jpg)
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    height: 500px
     width: 100%
+    padding: 90px 0
     overflow: hidden
 
 .team .header
@@ -45,7 +48,7 @@
         margin-right: 15px
 
     & .active
-        background: #12002C 0% 0% no-repeat padding-box
+        background: rgba(14, 1, 33, 0.6) no-repeat padding-box
 
 .members
     display: -webkit-box
@@ -54,7 +57,7 @@
     scrollbar-width: none
 
     .item
-        background: rgba(14, 1, 33, 0.7) no-repeat padding-box
+        background: rgba(14, 1, 33, 0.6) no-repeat padding-box
         color: $white
         border-radius: 15px
         padding: 30px 40px
@@ -102,6 +105,10 @@
 
 // responsive
 @media (max-width: $layout-breakpoint-tablet)
+
+    .team
+        height: 600px
+        background-size: cover
     
     .team .header .arrows
         display: none

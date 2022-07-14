@@ -4,38 +4,20 @@
             <img src="images/logo-footer.svg" alt="">
         </div>
         <ul class="links">
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">Team</a>
-            </li>
-            <li>
-                <a href="#">Docs</a>
-            </li>
-            <li>
-                <a href="#">Views</a>
-            </li>
-            <li>
-                <a href="#">Get in touch</a>
-            </li>
+            {{ range .Site.Menus.footer -}}
+                <li>
+                    <a href="{{ .URL }}">{{ .Name | safeHTML }}</a>
+                </li>
+            {{ end -}}
         </ul>
         <ul class="social-networks">
-            <li>
-                <a href="#">
-                    <img src="icons/medium.svg" alt="Medium logo">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="icons/twitter.svg" alt="Twitter logo">
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="icons/gitlab.svg" alt="Gitlab logo">
-                </a>
-            </li>
+            {{ range .Site.Menus.social -}}
+                <li>
+                    <a target="_blank" rel="noopener noreferrer" href="{{ .URL | absURL }}">
+                        <img src="{{ .Params.icon | absURL }}" alt="{{ .Name }}">
+                    </a>
+                </li>
+            {{ end -}}
         </ul>
     </div>
 </footer>

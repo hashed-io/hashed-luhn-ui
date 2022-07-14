@@ -11,9 +11,11 @@
           </li>
         {{ end -}}
       </ul>
-      <a href="#" class="btn-header">
-        Get in touch
-      </a>
+      {{ range .Site.Menus.button -}}
+        <a href="{{ .URL }}" class="btn-header">
+          {{ .Name | safeHTML }}
+        </a>
+      {{ end -}}
     </div>
     <a class="menu" onclick="showSidebar()">
       <img src="icons/menu.svg" alt="Menu icon">
@@ -33,8 +35,10 @@
         </li>
       {{ end -}}
     </ul>
-    <a href="#" class="btn-header">
-      Get in touch
-    </a>
+    {{ range .Site.Menus.button -}}
+      <a href="{{ .URL }}" class="btn-header">
+        {{ .Name | safeHTML }}
+      </a>
+    {{ end -}}
   </div>
 </aside>
